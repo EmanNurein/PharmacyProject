@@ -8,7 +8,7 @@
 # List of pharmacy
 
 # http://localhost:9700/pharmacy
-# # https://pharm-project.herokuapp.com/pharmacy
+# https://pharm-project.herokuapp.com/pharmacy
 
 
 # List of pharmacy wrt to city
@@ -58,12 +58,17 @@
         ]
     }
 ]
+# (POST) https://pharm-project.herokuapp.com/product
+  (Body) [1,2]
+
 
 # Filter on basis of producttype
 # http://localhost:9700/filters/1?proId=1
+# https://pharm-project.herokuapp.com/filters/1?proId=1
 
 # Filter on basis of cost
 # http://localhost:9700/filters/3?$lcost=2000&hcost=3000
+# https://pharm-project.herokuapp.com/filters/3?$lcost=2000&hcost=3000
 
 
 # page 3
@@ -71,7 +76,7 @@
 # Details of Pharmacy
 
 # http://localhost:9700/details/626714df194a2cd99f34cecd
-# https://pharm-project.herokuapp.com/details/626714df194a2cd99f34cecd
+# https://pharm-project.herokuapp.com/details/6267314e7f2364ff451529da
 
 # Products on basis of pharmacy
 
@@ -106,13 +111,13 @@
 
 # (POST)  https://pharm-project.herokuapp.com/placeOrder
 # (Body)  
-        {
-            "name": "Salma",
-            "email":"salma123@gmail.com",
-            "address": "Khartoum Bahri",
-            "phone": "0123123456",
-            "cost": 4000,
-            "productItem":[5,6],
+       {
+            "name": "habab",
+            "email":"habab@gmail.com",
+            "address": "Khartoum-3",
+            "phone": "098761234",
+            "cost": 1200,
+            "productItem":[2],
             "status":"pending"
         }
 
@@ -124,22 +129,26 @@
 # Get order on basis of emailId
 
 # http://localhost:9700/viewOrder?email=eman@gmail.com
-# https://pharm-project.herokuapp.com/viewOrder/?eman@gmail.com
+# https://pharm-project.herokuapp.com/viewOrder/?email=eman22@gmail.com
 
 # Update order
 
 # (PUT) http://localhost:9700/updateOrder/62575a0400178fa239ef724c
    # (Body)  
         {
-            "status":"In Transit",
-            "bankName":"Axis bank" 
+            
+            "email":"eman22@hotmail.com",
+            "address":"Alwaha -Khartoum",
+            "status":"Delivered"                
         }
 
-# (PUT) https://pharm-project.herokuapp.com/updateOrder/62575a0400178fa239ef724c
+# (PUT) https://pharm-project.herokuapp.com/updateOrder/62673b99c04b76cd633a5669
    # (Body) 
         {
-            "status":"In Transit",
-            "bankName":"BlueVine" 
+            
+            "email":"eman22@hotmail.com",
+            "address":"Alwaha -Khartoum",
+            "status":"Delivered"              
         }
 
 

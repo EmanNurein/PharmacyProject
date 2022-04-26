@@ -7,7 +7,7 @@ dotenv.config()
 let port = process.env.PORT || 8230;
 //const mongoUrl = process.env.mongoUrl;
 //const mongoUrl = "mongodb://localhost:27017";
-const mongoUrl = "mongodb+srv://eman:QT8LoVUWDt0uSVFu@cluster0.bvz0d.mongodb.net/emaapharmacy?retryWrites=true&w=majority";
+const mongoUrl = "mongodb+srv://eman:MscV9x0sGQfgsrIJ@cluster0.bvz0d.mongodb.net/emaapharmacy?retryWrites=true&w=majority";
 const bodyParser = require('body-parser');
 const cors = require('cors');
 // const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9";
@@ -188,10 +188,9 @@ const cors = require('cors');
                 {$set:{
                     "email":req.body.email,
                     "address":req.body.address,
-                    "status":req.body.status,
-                    "bank_name":req.body.bankName,
-                    
-                }},(err,result) => {
+                    "status":req.body.status, 
+                }
+                },(err,result) => {
                     if(err) throw err
                     res.send(`Status Updated to ${req.body.status}`)
                 }
